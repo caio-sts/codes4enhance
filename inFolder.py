@@ -90,5 +90,7 @@ def calculateImageMetrics(origPath: str, storePath: str):
         metrics[9] += calcEntropy2d(img2)
 
         i += 1
+        
+    return metrics / len(os.listdir(origPath))
 
 calculateImageMetrics("images1", "images2")
