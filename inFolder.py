@@ -93,4 +93,73 @@ def calculateImageMetrics(origPath: str, storePath: str):
         
     return metrics / len(os.listdir(origPath))
 
-calculateImageMetrics("images1", "images2")
+import random
+from skimage import io 
+from skimage import transform as tf
+
+def geometricImageAugmentation(origPath: str, storePath: str, numberOfGenerations: int, paramShear: int = 0 , paramRotation: int = 0, paramTranslatX: int = 0, paramTranslatY: int = 0):
+    """Apply geometric transformations on images like shear, rotation and translation for data augmentation.
+
+    Args:
+        origPath (str): Path to origin folder.
+        storePath (str): Path to destiny folder.
+        numberOfGenerations (int): number that must be generated for each image in origin folder.
+        paramShear (int, optional): Angle for shearing in degrees. Defaults to 0.
+        paramRotation (int, optional): Angle for rotation in degrees. Defaults to 0.
+        paramTranslatX (int, optional): Scale factor for horizontal translation. Defaults to 0.
+        paramTranslatY (int, optional): Scale factor for vertical translation. Defaults to 0.
+
+    Raises:
+        ValueError: origin and destiny paths mustn't be the same!
+        ValueError: the number of Generations must be equal or larger than 1.
+    """
+    # Handling problems like equal paths and unexistent directories
+    if origPath == storePath:
+        raise ValueError("Origin and destiny paths mustn't be the same!")
+    else:
+        if not os.path.isdir(origPath):
+            os.makedirs(origPath)
+        if not os.path.isdir(storePath):
+            os.makedirs(storePath)
+    
+    if numberOfGenerations <= 0:
+        raise ValueError("The number of Generations must be equal or larger than 1.")
+    else:
+        print(f"\n######## Starting Data Augmentation. ########\n")
+        for image in os.listdir(origPath):
+            if image[:-3] == "png" or "jpg" or "tif":
+                for i in range(numberOfGenerations):
+
+                    operation = random.randint(0,2)
+                    if operation == 0 and paramShear == 0:
+                        img = mpimg.imread(origPath+"/"+image)
+                        mpimg.imsave(storePath+"/"+str(i)+" "+image, img)
+                    elif operation == 0 and paramShear != 0:
+                        img = io.imread(origPath+"/"+image)
+                        afine_tf = tf.AffineTransform(shear=paramShear*(np.pi/180))
+                        img_shear = tf.warp(img, inverse_map=afine_tf)
+                        io.imsave(storePath+"/"+str(i)+" "+image, (255*img_shear).astype(np.uint8))
+                                
+                    elif operation == 1 and paramRotation == 0:
+                        img = mpimg.imread(origPath+"/"+image)
+                        mpimg.imsave(storePath+"/"+str(i)+" "+image, img)
+                    elif operation == 1 and paramRotation != 0:
+                        img = io.imread(origPath+"/"+image)
+                        afine_tf = tf.AffineTransform(rotation=paramRotation*(np.pi/180))
+                        img_rotat = tf.warp(img, inverse_map=afine_tf)
+                        io.imsave(storePath+"/"+str(i)+" "+image, (255*img_rotat).astype(np.uint8))
+
+                    elif operation == 2 and paramTranslatX == 0 and paramTranslatY == 0:
+                        imgArray = mpimg.imread(origPath+"/"+image)
+                        mpimg.imsave(storePath+"/"+str(i)+" "+image, img)
+                    elif operation == 2 and (paramTranslatY != 0 or paramTranslatX != 0):
+                        img = io.imread(origPath+"/"+image)
+                        afine_tf = tf.AffineTransform(translation=(paramTranslatX, paramTranslatY))
+                        img_transl = tf.warp(img, inverse_map=afine_tf)
+                        io.imsave(storePath+"/"+str(i)+" "+image, (255*img_transl).astype(np.uint8))
+                        
+            print(f" {i+1} images of {image} were generated.")        
+
+        print(f"\n######## Total of {len(os.listdir(storePath))} generated images. ########")
+
+        return
