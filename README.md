@@ -11,3 +11,8 @@ https://www.kaggle.com/datasets/firqaaa/brain-tumor-mri-graph-superpixels
 
 - Breast Tumor Ultrassound
 https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset
+
+After clone the repo, go to workfolder and type in terminal:
+python main.py -h
+
+There you will see arguments to apply enhance methods or do data augmentation by applying geometric transformations.
