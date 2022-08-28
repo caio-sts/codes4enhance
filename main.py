@@ -36,4 +36,7 @@ def main():
 
 
 if __name__ == "__main__":
+    startTime = time()
     main()
+    duration = round(time()-startTime, 2)
+    print(f"\n### This program was executed in {duration} seconds! ###\n")
