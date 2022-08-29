@@ -62,16 +62,21 @@ def enhance(origPath: str, storePath: str, method: str):
     return 
 
 import numpy as np
+import tabulate
 
 def calculateImageMetrics(origPath: str, storePath: str):
     
     i = 0
     metrics = np.zeros(10)
 
-    for img1 in os.listdir(origPath):
-        img2 = os.listdir(storePath)[i]
+    for imgind1 in os.listdir(origPath):
+        imgind2 = os.listdir(storePath)[i]
         ## faz array com todas as métricas, cada coluna(posição) é uma métrica,
         ##  soma a cada iteração, depois tira a média
+        
+        img1 = mpimg.imread(origPath+"/"+imgind1)
+        img2 = mpimg.imread(storePath+"/"+imgind2)
+
         if len(img1.shape) == 2:
             metrics[0] += RMSE(MSE(img1, img2))
             metrics[4] += PSNR(img2, MSE(img1, img2))
@@ -90,8 +95,12 @@ def calculateImageMetrics(origPath: str, storePath: str):
         metrics[9] += calcEntropy2d(img2)
 
         i += 1
+
+    headers = np.array(["RMSE", "CNR", "AMBE", "IEM", "PSNR", "EME", "AMEE", "colourIndex", "averGrad", "Entropy2d"])
+    table = metrics / len(os.listdir(origPath))
+    print(tabulate(table, headers, tablefmt="pretty"))
         
-    return metrics / len(os.listdir(origPath))
+    return 
 
 import random
 from skimage import io 
