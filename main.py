@@ -1,5 +1,6 @@
 import argparse
-from inFolder import enhance, geometricImageAugmentation
+from time import time
+from inFolder import enhance, geometricImageAugmentation, calculateImageMetrics
 
 def main():
     parser = argparse.ArgumentParser(description='Enhance images from a directory.')
@@ -22,7 +23,9 @@ def main():
         '-tx', '--translatx', nargs="?", type=int, help='scale factor for horizontal translation for data augmentation')
     parser.add_argument(
         '-ty', '--translaty', nargs="?", type=int, help='scale factor for vertical translation for data augmentation')
-    
+    parser.add_argument(
+        '-cm', '--calculateMetrics', nargs="?", type=bool, help='calculate metrics comparing images in an origin folder and generated images in destiny folder')
+
     args = parser.parse_args()
 
 
@@ -32,6 +35,9 @@ def main():
     elif args.geometrics == True:
         geometricImageAugmentation(args.origin, args.save, args.numberGenerat, 
                                     args.shear, args.rotation, args.translatx, args.translaty)
+
+    elif args.calculateMetrics == True:
+        calculateImageMetrics(args.origin, args.save)
 
 
 
