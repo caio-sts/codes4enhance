@@ -15,7 +15,7 @@ def findEnhancer(methodName: str):
         return denoWavelet
     elif methodName == "lime":
         return enhance_image_exposure
-    elif methodName == "fuzzylog":
+    elif methodName == "underwater":
         return rghs
 
 
@@ -436,13 +436,13 @@ from skimage import restoration
 
 
 def denoTV(img1):
-  return restoration.denoise_tv_chambolle(img1, weight=0.1, multichannel=True)
+  return restoration.denoise_tv_chambolle(img1, weight=0.1, channel_axis=-1)
 
 def denoBilat(img1):
-  return restoration.denoise_bilateral(img1, multichannel=True, sigma_color=0.05, sigma_spatial=15)
+  return restoration.denoise_bilateral(img1, sigma_color=0.05, sigma_spatial=15, channel_axis=-1)
 
 def denoWavelet(img1):
-  return restoration.denoise_wavelet(img1, multichannel=True, mode="soft", rescale_sigma=True)
+  return restoration.denoise_wavelet(img1, mode="soft", rescale_sigma=True, channel_axis=-1)
 
 
 ## LIME ##
@@ -642,7 +642,7 @@ def enhance_image_exposure(im: np.ndarray, gamma: float = 0.6, lambda_: float = 
     return np.clip(im_corrected * 255, 0, 255).astype("uint8")
 
 
-##  Fuzzy Logarithm ##
+##  Underwater Images Enhancement ##
 
 from skimage.color import rgb2lab, lab2rgb
 from skimage.color import rgb2hsv,hsv2rgb
@@ -709,19 +709,16 @@ def  LABStretching(sceneRadiance):
     labArray[:, :, 2] = img_b_stretching
     img_rgb = lab2rgb(labArray) * 255
 
-
-
     return img_rgb
 
 def rghs(img):
-  height = len(img)
-  width = len(img[0])
-  # sceneRadiance = RGB_equalisation(img)
+    height = len(img)
+    width = len(img[0])
+    # sceneRadiance = RGB_equalisation(img)
 
-  sceneRadiance = img
-  # sceneRadiance = RelativeGHstretching(sceneRadiance, height, width)
+    sceneRadiance = img
+    # sceneRadiance = RelativeGHstretching(sceneRadiance, height, width)
+    sceneStretched = stretching(sceneRadiance)
+    imgRadiance = LABStretching(sceneStretched).astype(np.uint8)
 
-  sceneRadiance = stretching(sceneRadiance)
-
-  sceneRadiance = LABStretching(sceneRadiance)
-  return sceneRadiance
+    return imgRadiance
