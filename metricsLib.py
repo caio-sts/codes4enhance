@@ -46,26 +46,29 @@ def AMBE(img1, img2):
 # IEM 
 def somaDiffCenter8Neighborspx(img: np.array, i: int, j: int):
     somaAbsDif = 0
-    A = img.copy()
+    A = np.copy(img)
     
     for k in [-1, 0, +1]:
         for l in [-1, 0, +1]:
-            somaAbsDif += abs(A[i][j]-A[i+k][j+l])
-
+            if not (k==0 and l==0):         
+                somaAbsDif += abs(A[i][j]-A[i+k][j+l])
+  
     return somaAbsDif
 
 
 def IEM(img1, img2):
-    im1 = img1.copy()
-    im2 = img2.copy()
-    somaEnhancedImg = 0
-    somaRootImg = 0
+    im1 = np.copy(img1)
+    im2 = np.copy(img2)
+
+    somaEnhancedImg = np.longdouble(0)
+    somaRootImg = np.longdouble(0)
 
     for i in range(1, len(im1), 3):
-        for j in range(1, len(im2), 3):
-            somaRootImg += somaDiffCenter8Neighborspx(im1, i, j)
-            
-            somaEnhancedImg += somaDiffCenter8Neighborspx(im2, i, j)
+        if i<=len(im1)-1:
+          for j in range(1, len(im1[0]), 3):
+              if j<= len(im1[0])-1:
+                somaRootImg += somaDiffCenter8Neighborspx(np.sum(im1, 2), i, j)
+                somaEnhancedImg += somaDiffCenter8Neighborspx(np.sum(im2, 2), i, j)
 
     return somaEnhancedImg / somaRootImg
 
@@ -141,9 +144,16 @@ def calcIJ(img_patch):
 from multiprocessing import Pool
 from collections import Counter
 
-def calcEntropy2d(img, win_w=3, win_h=3, threadNum=6):
+def rgb2gray(rgb):
+    return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
+
+def calcEntropy2d(img_input, win_w=3, win_h=3, threadNum=6):
+    img = img_input
     height = img.shape[0]
     width = img.shape[1]
+
+    if img.shape[2] == 3:
+      img = rgb2gray(img)
 
     ext_x = int(win_w / 2)
     ext_y = int(win_h / 2)
