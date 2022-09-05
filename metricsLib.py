@@ -64,9 +64,9 @@ def IEM(img1, img2):
     somaRootImg = np.longdouble(0)
 
     for i in range(1, len(im1), 3):
-        if i<=len(im1)-1:
+        if i<len(im1)-1:
           for j in range(1, len(im1[0]), 3):
-              if j<= len(im1[0])-1:
+              if j< len(im1[0])-1:
                 somaRootImg += somaDiffCenter8Neighborspx(np.sum(im1, 2), i, j)
                 somaEnhancedImg += somaDiffCenter8Neighborspx(np.sum(im2, 2), i, j)
 
