@@ -62,7 +62,7 @@ def enhance(origPath: str, storePath: str, method: str):
     return 
 
 import numpy as np
-import tabulate
+from tabulate import tabulate
 
 def calculateImageMetrics(origPath: str, storePath: str):
     
@@ -93,13 +93,14 @@ def calculateImageMetrics(origPath: str, storePath: str):
         metrics[7] += colourIndex(img2)#verificar se é a img2 que vai nessas 3 ultimas métricas
         metrics[8] += averGrad(img2)
         metrics[9] += calcEntropy2d(img2)
-
         i += 1
 
     headers = np.array(["RMSE", "CNR", "AMBE", "IEM", "PSNR", "EME", "AMEE", "colourIndex", "averGrad", "Entropy2d"])
     table = metrics / len(os.listdir(origPath))
-    print(tabulate(table, headers, tablefmt="pretty"))
-        
+
+    
+    print(tabulate([table], headers=headers, tablefmt='orgtbl'))
+
     return 
 
 import random
