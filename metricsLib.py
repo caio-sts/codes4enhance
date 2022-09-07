@@ -45,7 +45,7 @@ def AMBE(img1, img2):
 
 # IEM 
 def somaDiffCenter8Neighborspx(img: np.array, i: int, j: int):
-    somaAbsDif = 0
+    somaAbsDif = np.longdouble(0)
     A = np.copy(img)
     
     for k in [-1, 0, +1]:
@@ -59,7 +59,7 @@ def somaDiffCenter8Neighborspx(img: np.array, i: int, j: int):
 def IEM(img1, img2):
     im1 = np.copy(img1)
     im2 = np.copy(img2)
-
+    
     somaEnhancedImg = np.longdouble(0)
     somaRootImg = np.longdouble(0)
 
@@ -68,7 +68,7 @@ def IEM(img1, img2):
           for j in range(1, len(im1[0]), 3):
               if j< len(im1[0])-1:
                 somaRootImg += somaDiffCenter8Neighborspx(np.sum(im1, 2), i, j)
-                somaEnhancedImg += somaDiffCenter8Neighborspx(np.sum(im2, 2), i, j)
+                somaEnhancedImg += somaDiffCenter8Neighborspx(np.sum(im2, 2), i, j)    
 
     return somaEnhancedImg / somaRootImg
 
@@ -105,7 +105,7 @@ def AMEE(img2):
     for j in range(1,len(img2[0])):
       if np.min(img2[:i][:j]) != 0:
         res += (alpha * (np.max(img2[:i][:j])/np.min(img2[:i][:j]))**alpha)*np.log(np.max(img2[:i][:j])/np.min(img2[:i][:j]))
-  
+        
   return res/(len(img2)*len(img2[0])) 
 
 def colourIndex(img2):
@@ -152,7 +152,7 @@ def calcEntropy2d(img_input, win_w=3, win_h=3, threadNum=6):
     height = img.shape[0]
     width = img.shape[1]
 
-    if img.shape[2] == 3:
+    if img.shape[2] is not None and img.shape[2] == 3:
       img = rgb2gray(img)
 
     ext_x = int(win_w / 2)
