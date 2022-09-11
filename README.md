@@ -20,21 +20,21 @@ There you will see arguments to apply enhance methods or do data augmentation by
 
 
 ## References
- - Histogram Equalization (HE)
+ - Histogram Equalization (HE) 
   W. Zhihong and X. Xiaohong, “Study on Histogram Equalization,” 2011 2nd International Symposium on Intelligence Information Processing and Trusted Computing, 2011. 
- - Dynamic Histogram Equalization (DHE)
+ - Dynamic Histogram Equalization (DHE) 
   M. Abdullah-Al-Wadud, M. Kabir, M. Akber Dewan, and O. Chae, “A dynamic histogram equalization for image contrast enhancement,” IEEE Transactions on Consumer Electronics, vol. 53, no. 2, pp. 593–600, 2007. 
- - YING_CAIP_2017
+ - Image contrast using exposure fusion framework (alias in code: ying) 
   Z. Ying, G. Li, Y. Ren, R. Wang, and W. Wang, “A new image contrast enhancement algorithm using exposure fusion framework,” Computer Analysis of Images and Patterns, pp. 36–46, 2017. 
- - Total Variation Denoise (alias in code: denoTV)
+ - Total Variation Denoise (alias in code: denoTV) 
   Chambolle, A. An Algorithm for Total Variation Minimization and Applications. Journal of Mathematical Imaging and Vision 20, 89–97 (2004).
- - Wavelet Denoise (alias in code: denoWavelet)
+ - Wavelet Denoise (alias in code: denoWavelet) 
   S. G. Chang, Bin Yu, and M. Vetterli, “Adaptive wavelet thresholding for image denoising and compression,” IEEE Transactions on Image Processing, vol. 9, no. 9, pp. 1532–1546, 2000.
- - Bilateral denoise (alias in code: denoBilat)
+ - Bilateral denoise (alias in code: denoBilat) 
   C. Tomasi and R. Manduchi, “Bilateral filtering for gray and color images,” Sixth International Conference on Computer Vision (IEEE Cat. No.98CH36271). 
- - Low-light image enhancement via Ilumination Map Estimation (LIME)
+ - Low-light image enhancement via Ilumination Map Estimation (LIME) 
   X. Guo, Y. Li, and H. Ling, “Lime: Low-light image enhancement via Illumination Map Estimation,” IEEE Transactions on Image Processing, vol. 26, no. 2, pp. 982–993, 2017. 
- - Contrast enhancement of brightness-distorted images by improved adaptive gamma correction (alias in code: iagc)
+ - Contrast enhancement of brightness-distorted images by improved adaptive gamma correction (alias in code: iagc) 
   G. Cao, L. Huang, H. Tian, X. Huang, Y. Wang, and R. Zhi, “Contrast enhancement of brightness-distorted images by improved adaptive gamma correction,” Computers &amp; Electrical Engineering, vol. 66, pp. 569–582, 2018. 
- - Image enhancement and image restoration for underwater images (alias in code: rghs)
+ - Image enhancement and image restoration for underwater images (alias in code: rghs) 
   Y. Wang, W. Song, G. Fortino, L.-Z. Qi, W. Zhang, and A. Liotta, “An experimental-based review of image enhancement and image restoration methods for underwater imaging,” IEEE Access, vol. 7, pp. 140233–140251, 2019. 
