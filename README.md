@@ -17,7 +17,10 @@ python main.py -h
 
 There you will see arguments to apply enhance methods or do data augmentation by applying geometric transformations.
 
+## How to use
 
+ 1. Clone this repo
+ 2. 
 
 ## References
  - Histogram Equalization (HE)  
