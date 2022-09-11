@@ -20,7 +20,17 @@ There you will see arguments to apply enhance methods or do data augmentation by
 ## How to use
 
  1. Clone this repo
- 2. 
+ 2. Use this command at terminal:
+    ```
+    python -m main -o "<origin folder>" -s "<to_save folder>" <other arguments>
+    ```
+    2.1 If you want to generate enhanced images using one of the available methods, add ``` -n <referenced alias function code> ``` in place of <other arguments>  
+    2.2 If you want to generate new images using random geometric transformations, add 
+``` 
+-g True -x <number of images to generate> -sh <angle for shearing> -r <angle for rotation> -tx <horizontal scale translation factor> -ty <vertical scale translation factor>
+```
+    2.3 If you want to calculate metrics comparing original images and them after enhance, add ``` -cm True 
+```
 
 ## References
  - Histogram Equalization (HE)  
