@@ -12,6 +12,8 @@ https://www.kaggle.com/datasets/firqaaa/brain-tumor-mri-graph-superpixels
 - Breast Tumor Ultrassound
 https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset
 
+The related researchers recommend Python <=3.10
+
 After clone the repo, go to workfolder and type in terminal:
 python main.py -h
 
