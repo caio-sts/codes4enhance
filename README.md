@@ -41,9 +41,9 @@ There you will see arguments to apply enhance methods or do data augmentation by
 
 ## Use examples
 
-Solarized dark             |  Solarized Ocean
+Hand x-ray (Original)             |  Histogram Equalization (he)
 :-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+![](https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png)  |  ![](https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png)
 
 
 ## References
