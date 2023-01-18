@@ -39,7 +39,7 @@ There you will see arguments to apply enhance methods or do data augmentation by
  -cm True 
  ```
 
-## Result examples
+## Result examples (Zoom in for better visualization of details in bones)
 
 Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic Histogram Equalization (dhe)
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -53,8 +53,8 @@ Bilateral (bilateral)         |  Ilumination Map Estimation (lime)     |  Gamma 
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raybilateral.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raylime.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raygammacorrection.png" height="400" width="425"/>
  
-Underwater (rghs)         |
-:-------------------------:|
+Underwater (rghs)         |                            |
+:-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayunderwater.png" height="400" width="425"/> |
  
  
