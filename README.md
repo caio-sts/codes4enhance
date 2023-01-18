@@ -41,7 +41,7 @@ There you will see arguments to apply enhance methods or do data augmentation by
 
 ## Result examples 
  
-### (Zoom in for better visualization of details in bones)
+#### (Zoom in for better visualization of details in bones)
  
 Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic Histogram Equalization (dhe)
 :-------------------------:|:-------------------------:|:-------------------------:
