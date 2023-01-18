@@ -39,6 +39,13 @@ There you will see arguments to apply enhance methods or do data augmentation by
  -cm True 
  ```
 
+## Use examples
+
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://...Dark.png)  |  ![](https://...Ocean.png)
+
+
 ## References
  - Histogram Equalization (HE)  
   W. Zhihong and X. Xiaohong, “Study on Histogram Equalization,” 2011 2nd International Symposium on Intelligence Information Processing and Trusted Computing, 2011. 
