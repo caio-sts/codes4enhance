@@ -45,6 +45,9 @@ Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic 
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayhe.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raydhe.png" height="400" width="425"/>
 
+Exposure Fusion framework (ying)         |  Total Variation (tv)     |  Wavelet (wavelet)
+ :-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayying.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raytv.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raybilateral.png" height="400" width="425"/>
 
 ## References
  - Histogram Equalization (HE)  
