@@ -46,9 +46,18 @@ Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic 
 <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayhe.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raydhe.png" height="400" width="425"/>
 
 Exposure Fusion framework (ying)         |  Total Variation (tv)     |  Wavelet (wavelet)
- :-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayying.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raytv.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raybilateral.png" height="400" width="425"/>
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayying.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raytv.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raywavelet.png" height="400" width="425"/>
 
+Bilateral (bilateral)         |  Ilumination Map Estimation (lime)     |  Gamma Correction (iagc)
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raybilateral.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raylime.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raygammacorrection.png" height="400" width="425"/>
+ 
+Underwater (rghs)         |
+:-------------------------:|
+<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayunderwater.png" height="400" width="425"/> |
+ 
+ 
 ## References
  - Histogram Equalization (HE)  
   W. Zhihong and X. Xiaohong, “Study on Histogram Equalization,” 2011 2nd International Symposium on Intelligence Information Processing and Trusted Computing, 2011. 
