@@ -43,7 +43,7 @@ There you will see arguments to apply enhance methods or do data augmentation by
 
 Hand x-ray (Original)             |  Histogram Equalization (he)
 :-------------------------:|:-------------------------:
-![](https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png)  |  ![](https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png)
+<img src="image1.png" width="425"/> <img src="image2.png" width="425"/>   |  <img src="image1.png" width="425"/> <img src="image2.png" width="425"/> 
 
 
 ## References
