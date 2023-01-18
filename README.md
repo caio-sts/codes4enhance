@@ -39,7 +39,7 @@ There you will see arguments to apply enhance methods or do data augmentation by
  -cm True 
  ```
 
-## Use examples
+## Result examples
 
 Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic Histogram Equalization (dhe)
 :-------------------------:|:-------------------------:|:-------------------------:
