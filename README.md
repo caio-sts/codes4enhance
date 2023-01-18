@@ -41,9 +41,9 @@ There you will see arguments to apply enhance methods or do data augmentation by
 
 ## Use examples
 
-Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic Histogram Equalization (dhe)     |  Exposure Fusion framework (ying)     |  Total Variation (tv)
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayhe.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raydhe.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayying.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raytv.png" height="300" width="425"/> 
+Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic Histogram Equalization (dhe)     |  Exposure Fusion framework (ying)  
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayhe.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raydhe.png" height="300" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayying.png" height="300" width="425"/>
 
 
 ## References
