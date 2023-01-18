@@ -39,8 +39,10 @@ There you will see arguments to apply enhance methods or do data augmentation by
  -cm True 
  ```
 
-## Result examples (Zoom in for better visualization of details in bones)
-
+## Result examples 
+ 
+### (Zoom in for better visualization of details in bones)
+ 
 Hand x-ray (Original)             |  Histogram Equalization (he)     |  Dynamic Histogram Equalization (dhe)
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/hand-x-ray.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-rayhe.png" height="400" width="425"/> |  <img src="https://github.com/caio-sts/codes4enhance/blob/main/examples/0%20hand-x-raydhe.png" height="400" width="425"/>
